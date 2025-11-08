@@ -15,6 +15,15 @@ module todolist::todolist {
 
         transfer::transfer(list, tx_context::sender(ctx)); 
     }
+
+    public fun add_item(list: &mut ToDoList, item: String) {
+        vector::push_back(&mut list.items, item);
+    }
+
+    public fun get_items(list: &ToDoList): vector<String> {
+        list.items
+    }
+
 }
 
 // id do pacote: 0x23bf809d574e12a7258f8d19922a014bf8fa5200e39f5d59d5e3c343cb3cd22c

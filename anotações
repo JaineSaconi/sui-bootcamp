@@ -1,0 +1,8 @@
+1 - nao se pode inicializar uma struct diretamente, 
+sempre use uma função construtora  (exemplo o "assign" no contador)
+
+2 - 
+Nao é possivel realizar uma comparação direta de duas variaveis
+pois em um caso a==b o move destroi os valores originais, para realizar uma comparação
+é preciso referenciar o valor da variavel com um apontador
+exemplo: &a == &b ou a==&b.

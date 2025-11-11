@@ -20,8 +20,8 @@ module todolist::todolist {
         vector::push_back(&mut list.items, item);
     }
 
-    public fun get_items(list: &ToDoList): vector<String> {
-        list.items
+    public fun remove(list: &mut ToDoList, index: u64) {
+        list.items.remove(index);
     }
 
 }
